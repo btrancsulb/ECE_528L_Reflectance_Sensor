@@ -61,7 +61,16 @@ Black tape discharges slowly, so those bits remain `1` after 1000 µs. A white s
 
 Serial output from `Print_Binary()` was captured on COM5 while the robot was running. Each line is the 8-bit QTRX mask with an underscore after bit 4:
 
-![UART binary output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
+
+![UART output from Print_Binary with no tape](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-22%20150430.png)
+
+Over white paper with no black tape, every channel reads `0` (dead end):
+
+```
+Binary: 0000_0000
+```
+
+![output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
 
 ```
 Binary: 1101_0110
