@@ -22,7 +22,7 @@
  *
  * This function takes an 8-bit unsigned integer as input and prints its binary
  * representation with an underscore (_) separator after the 4th bit. If the input
- * value is 0, it prints "Line Sensor: 0000_0000".
+ * value is 0, it prints "Binary: 0000_0000".
  *
  * @param value_to_convert - The 8-bit value to be converted and printed.
  *
