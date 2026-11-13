@@ -70,6 +70,7 @@ Black tape discharges slowly, so those bits remain `1` after 1000 µs. A white s
 Serial output from `Print_Binary()` was captured on COM5 while the robot was running. Each line is the 8-bit QTRX mask with an underscore after bit 4:
 >>>>>>> parent of d7fc713 (Revamped README to reflect changes for the Line Follower Lab, detailing the integration of reflectance sensing, motor control, and timer functionalities. Updated component list, signal connections, and analysis sections for clarity and completeness. Included video demonstration of the robot's performance on the track.)
 
+<<<<<<< HEAD
 Black tape discharges slowly, so those bits remain `1` after 1000 µs. A white surface discharges quickly, so those bits read `0`. `Print_Binary()` sends the mask to the serial terminal in the form `Binary: xxxx_xxxx`. A value of `0` prints `Binary: 0000_0000`.
 
 <<<<<<< HEAD
@@ -211,6 +212,9 @@ Binary: 0000_0000
 =======
 ![output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
 >>>>>>> parent of d7fc713 (Revamped README to reflect changes for the Line Follower Lab, detailing the integration of reflectance sensing, motor control, and timer functionalities. Updated component list, signal connections, and analysis sections for clarity and completeness. Included video demonstration of the robot's performance on the track.)
+=======
+![UART binary output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
+>>>>>>> parent of 0d801ad (Updated README with new UART output images and added explanation for reflectance sensor readings over white paper. Improved clarity of sensor data representation.)
 
 ```
 Binary: 1101_0110
