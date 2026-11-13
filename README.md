@@ -41,9 +41,32 @@ The software is organized as:
 4. Wait `time` microseconds (1000 µs in `main`).
 5. Snapshot `P7->IN` into `reflectance_value`.
 6. Turn the IR LEDs off and return the 8-bit result.
+<<<<<<< HEAD
+=======
 
 Black tape discharges slowly, so those bits remain `1` after 1000 µs. A white surface discharges quickly, so those bits read `0`. `Print_Binary()` sends the mask to the serial terminal in the form `Binary: xxxx_xxxx`. A value of `0` prints `Binary: 0000_0000`.
 
+`Detect_Line_Position()` maps exact 8-bit patterns to the LaunchPad LEDs. The LEDs start off after initialization. Observed mappings:
+
+| Line maze possibility | Sensor value | UART output | LED1 | RGB LED |
+|---|---|---|---|---|
+| Center | `0001_1000` (`0x18`) | `Binary: 0001_1000` | Off | Green |
+| Slightly left of center | `0001_1100` (`0x1C`) | `Binary: 0001_1100` | Off | Yellow |
+| Slightly right of center | `0011_1000` (`0x38`) | `Binary: 0011_1000` | Off | Pink |
+| Far left of center | `0000_0001` (`0x01`) | `Binary: 0000_0001` | Off | White |
+| Far right of center | `1000_0000` (`0x80`) | `Binary: 1000_0000` | Off | Sky blue |
+| Left turn | `1111_1000` (`0xF8`) | `Binary: 1111_1000` | On | White |
+| Right turn | `0001_1111` (`0x1F`) | `Binary: 0001_1111` | On | Sky blue |
+| T-intersection | `1111_1111` (`0xFF`) | `Binary: 1111_1111` | Off | Blue |
+| Dead end | `0000_0000` (`0x00`) | `Binary: 0000_0000` | Off | Red |
+| Default (any other mask) | --- | printed mask | Off | Off |
+
+Serial output from `Print_Binary()` was captured on COM5 while the robot was running. Each line is the 8-bit QTRX mask with an underscore after bit 4:
+>>>>>>> parent of d7fc713 (Revamped README to reflect changes for the Line Follower Lab, detailing the integration of reflectance sensing, motor control, and timer functionalities. Updated component list, signal connections, and analysis sections for clarity and completeness. Included video demonstration of the robot's performance on the track.)
+
+Black tape discharges slowly, so those bits remain `1` after 1000 µs. A white surface discharges quickly, so those bits read `0`. `Print_Binary()` sends the mask to the serial terminal in the form `Binary: xxxx_xxxx`. A value of `0` prints `Binary: 0000_0000`.
+
+<<<<<<< HEAD
 `Detect_Line_Position()` maps exact 8-bit patterns to the LaunchPad LEDs. The LEDs start off after initialization. Observed mappings:
 
 | Line maze possibility | Sensor value | UART output | LED1 | RGB LED |
@@ -67,15 +90,25 @@ Serial output from `Print_Binary()` was captured on COM5 while the robot was run
 
 Over white paper with no black tape, every channel reads `0` (dead end):
 
+=======
+![UART output from Print_Binary with no tape](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-22%20150430.png)
+
+Over white paper with no black tape, every channel reads `0` (dead end):
+
+>>>>>>> parent of d7fc713 (Revamped README to reflect changes for the Line Follower Lab, detailing the integration of reflectance sensing, motor control, and timer functionalities. Updated component list, signal connections, and analysis sections for clarity and completeness. Included video demonstration of the robot's performance on the track.)
 ```
 Binary: 0000_0000
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Position calculation and steering**
 =======
 ![UART binary output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
 >>>>>>> parent of 0d801ad (Updated README with new UART output images and added explanation for reflectance sensor readings over white paper. Improved clarity of sensor data representation.)
+=======
+![output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
+>>>>>>> parent of d7fc713 (Revamped README to reflect changes for the Line Follower Lab, detailing the integration of reflectance sensing, motor control, and timer functionalities. Updated component list, signal connections, and analysis sections for clarity and completeness. Included video demonstration of the robot's performance on the track.)
 =======
 ![output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
 >>>>>>> parent of d7fc713 (Revamped README to reflect changes for the Line Follower Lab, detailing the integration of reflectance sensing, motor control, and timer functionalities. Updated component list, signal connections, and analysis sections for clarity and completeness. Included video demonstration of the robot's performance on the track.)
