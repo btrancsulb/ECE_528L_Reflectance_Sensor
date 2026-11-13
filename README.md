@@ -54,9 +54,9 @@ The tables and timing diagrams below come from the flashed firmware and from pla
 
 The clip below shows the TI-RSLK MAX following 3/4" black tape: it drives forward on center, corrects when the array drifts, and stops when the line ends.
 
-[Line-follower demonstration (IMG_3958.mp4)](media/IMG_3958.mp4)
+[Line-follower demonstration (IMG_3958.MOV)](media/IMG_3958.MOV)
 
-<video src="media/IMG_3958.mp4" controls width="640">
+<video src="media/IMG_3958.MOV" controls width="640">
   Your browser cannot play this video. Open <a href="media/IMG_3958.MOV">IMG_3958.MOV</a> instead.
 </video>
 
