@@ -48,6 +48,7 @@ Bit 0 is the rightmost QTRX channel. Bit 7 is the leftmost channel.
 
 The tables and timing diagrams below come from the flashed firmware and from placing the robot on the tape patterns used in lab. PWM numbers are Timer A0 compare values from the driver, not measured wheel speed.
 
+<<<<<<< HEAD
 
 **Video of robot moving along the track**
 
@@ -74,6 +75,9 @@ Control action:           LEDs + motors            LEDs + motors
 ```
 
 **Position calculation and steering**
+=======
+![UART binary output from Print_Binary on COM5](ece528L_reflectance_sensor/Reflectance_Sensor/src/Screenshot%202026-10-08%20204502.png)
+>>>>>>> parent of 0d801ad (Updated README with new UART output images and added explanation for reflectance sensor readings over white paper. Improved clarity of sensor data representation.)
 
 `Reflectance_Sensor_Position()` averages the weights of the active sensor bits:
 
